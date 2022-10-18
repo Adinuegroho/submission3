@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabStatusFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/imgDataUser"
+            app:layout_constraintEnd_toEndOf="@id/imgDataUser"
+            app:fabSize="mini"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="@string/favorite" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgDataUser"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/tvDataRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvRepo"
+            app:layout_constraintTop_toTopOf="@id/imgDataUser"
+            app:layout_constraintEnd_toEndOf="@+id/tvRepo"
+            tools:text="@string/repository" />
+
+        <TextView
+            android:id="@+id/tvDataFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/following"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFollowing"
+            app:layout_constraintTop_toTopOf="@id/tvDataRepo"
+            app:layout_constraintEnd_toEndOf="@+id/tvFollowing"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDataFollower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/followers"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFollower"
+            app:layout_constraintTop_toTopOf="@id/tvDataRepo"
+            app:layout_constraintEnd_toEndOf="@id/tvFollower"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repository"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imgDataUser"
+            app:layout_constraintTop_toBottomOf="@+id/tvDataRepo"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/following"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvRepo"
+            app:layout_constraintTop_toTopOf="@+id/tvRepo"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/tvFollower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/followers"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvFollowing"
+            app:layout_constraintTop_toTopOf="@+id/tvRepo"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person"
+            android:contentDescription="@string/name"
+            app:layout_constraintTop_toBottomOf="@+id/imgDataUser"
+            app:layout_constraintStart_toStartOf="@id/imgDataUser"
+            android:layout_marginTop="42dp"/>
+
+        <ImageView
+            android:id="@+id/imgLockPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock_person"
+            android:contentDescription="@string/name"
+            app:layout_constraintTop_toBottomOf="@+id/imgPerson"
+            app:layout_constraintStart_toStartOf="@id/imgDataUser"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:contentDescription="@string/location"
+            app:layout_constraintTop_toBottomOf="@+id/imgLockPerson"
+            app:layout_constraintStart_toStartOf="@id/imgDataUser"
+            android:layout_marginTop="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_corporate"
+            android:contentDescription="@string/company"
+            app:layout_constraintTop_toBottomOf="@+id/imgLocation"
+            app:layout_constraintStart_toStartOf="@id/imgDataUser"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDataPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/name"
+            app:layout_constraintStart_toEndOf="@id/imgPerson"
+            app:layout_constraintTop_toTopOf="@id/imgPerson"
+            android:layout_marginStart="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDataLockPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/username"
+            app:layout_constraintStart_toEndOf="@id/imgLockPerson"
+            app:layout_constraintTop_toTopOf="@id/imgLockPerson"
+            android:layout_marginStart="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDataLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/location"
+            app:layout_constraintStart_toEndOf="@id/imgLocation"
+            app:layout_constraintTop_toTopOf="@id/imgLocation"
+            android:layout_marginStart="24dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvDataCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/company"
+            app:layout_constraintStart_toEndOf="@id/imgCompany"
+            app:layout_constraintTop_toTopOf="@id/imgCompany"
+            android:layout_marginStart="24dp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:tabTextColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/imgCompany"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintTop_toBottomOf="@+id/tabs"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
